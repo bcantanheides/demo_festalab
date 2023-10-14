@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo Festalab</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark py-3 px-4" style="margin-bottom: 25px; background-color: #460f5f">
+      <%= image_tag 'logo', width: '30' %>
+      <form class="form-inline my-2 my-lg-0" method="get">
+      <div class="row">  
+      <div class="col">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </div>
+        <div class="col">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </div>
+        </div>
+      </form>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

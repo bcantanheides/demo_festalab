@@ -1,0 +1,46 @@
+<%= form_with(model: user, html: { data: { controller: "masks" } }) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-6 card p-3 class">
+      <div class="row mb-2">
+        <div class="col">
+          <%= form.label :name, 'Nome', style: "display: block" %>
+          <%= form.text_field :name, class:"form-control" %>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div>
+          <%= form.label :email, 'Email', style: "display: block" %>
+          <%= form.text_field :email, class:"form-control" %>
+        </div>
+      </div>
+        <div class="row" style="margin-bottom: 10px">
+          <div class="col">
+            <%= form.label :phone, 'Celular', style: "display: block" %>
+            <%= form.text_field :phone,  class: "form-control", data: {masks_target: 'phone'} %>
+          </div>
+
+          <div class="col">
+            <%= form.label :cpf, 'CPF', style: "display: block" %>
+            <%= form.text_field :cpf, class: "form-control", data: {masks_target: 'cpf'} %>
+          </div>
+        </div>
+
+        <div>
+          <%= form.submit %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
