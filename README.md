@@ -1,24 +1,38 @@
-# README
+# Tech Vinklo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este projeto foi construído para o Tech Vinklo - FestaLab, utilizando Ruby on Rails.
 
-Things you may want to cover:
+## 💻 Requisitos
 
-* Ruby version
+-  Ruby on Rails 7.0.2.3;
+-   Ruby 3.0.0;
+-   npm 8.5.0;
+-   node 16.14.2
+-   yarn 1.22.18
 
-* System dependencies
+## 🚀 Instalando 
 
-* Configuration
+* clone o repositório
+```
+$ git clone https://github.com/bcantanheides/demo_festalab.git
+```
+* instalando as dependências
+```
+$ bundle
+``` 
+* instancie a base de dados
+```
+$ rails db:migrate
+``` 
 
-* Database creation
+* pre-compile os assets
+```
+$ bundle exec rake assets:precompile
+``` 
+## ☕ Utilizando
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* inicialize utilizando
+```
+$ ruby bin/rails server
+```
+* abra http://localhost:3000/ no browser
