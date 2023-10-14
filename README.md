@@ -4,11 +4,11 @@ Este projeto foi construído para o Tech Vinklo - FestaLab, utilizando Ruby on R
 
 ## 💻 Requisitos
 
--  Ruby on Rails 7.0.2.3;
--   Ruby 3.0.0;
--   npm 8.5.0;
--   node 16.14.2
--   yarn 1.22.18
+-  Ruby on Rails 7.1.1;
+-   Ruby 3.2.2;
+-   npm 9.8.1;
+-   node 18.18.1
+-   yarn 1.22.19
 
 ## 🚀 Instalando 
 
